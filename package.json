@@ -1,0 +1,53 @@
+{
+  "name": "@mini4/core",
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": "dalaoshu <laipichan@qq.com>",
+  "homepage": "https://github.com/shulaoda/mini4-core",
+  "description": "This is the frontend core architecture of NJUPT Mini Program 4.0",
+  "keywords": [
+    "taro",
+    "njupt",
+    "framework"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [],
+  "bugs": {
+    "url": "https://github.com/shulaoda/mini4-core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shulaoda/mini4-core.git"
+  },
+  "scripts": {
+    "prebuild": "pnpm run clean",
+    "build": "pnpm run rollup --environment NODE_ENV:production",
+    "clean": "rimraf ./dist",
+    "dev": "pnpm run rollup --environment NODE_ENV:development -w",
+    "rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --bundleConfigAsCjs"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.5"
+  },
+  "peerDependencies": {
+    "@tarojs/taro": "3.6.23"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "rollup": "^3.8.1",
+    "rollup-plugin-node-externals": "^5.0.0",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
