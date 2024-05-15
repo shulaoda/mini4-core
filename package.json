@@ -37,7 +37,11 @@
     "@babel/runtime": "^7.14.5"
   },
   "peerDependencies": {
-    "@tarojs/taro": "3.6.23"
+    "@tarojs/taro": "3.6.23",
+    "@types/use-sync-external-store": "^0.0.6",
+    "immer": "^10.0.4",
+    "react": "^18.2.0",
+    "use-sync-external-store": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
@@ -45,6 +49,7 @@
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-typescript": "^11.1.0",
+    "@types/react": "^18.0.0",
     "rollup": "^3.8.1",
     "rollup-plugin-node-externals": "^5.0.0",
     "rollup-plugin-ts": "^3.0.2",
